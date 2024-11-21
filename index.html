@@ -20,11 +20,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
-  <body class="main-body">
-    <main class="container-fluid">
+  <body class="main-body" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <main class="container-fluid" id="alku">
       <nav class="navbar navbar-expand-sm navbar-custom fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="#alku">
             <img src="Kuvat/Logo.png" alt="Kyles Vinyls Logo" class="logo" />
             Kyle's Vinyls
           </a>
@@ -39,13 +39,15 @@
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">New Arrivals</a>
+                <a class="nav-link" href="#about">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Special Releases</a>
+                <a class="nav-link" href="#new-arrivals">New Arrivals</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
+                <a class="nav-link" href="#contact">Contact Info</a>
+              <li class="nav-item">
+                <a class="nav-link" href="#feedback">Give Feedback</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -56,9 +58,9 @@
                   >Vinyls</a
                 >
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">All Vinyls</a></li>
+                  <li><a class="dropdown-item" href="#featured-vinyls">Featured Vinyls</a></li>
+                  <li><a class="dropdown-item" href="#tabs">Videos from featured</a></li>
                   <li><a class="dropdown-item" href="#">Used Vinyls</a></li>
-                  <li><a class="dropdown-item" href="#">Vinyl Gear</a></li>
                 </ul>
               </li>
             </ul>
@@ -66,109 +68,259 @@
         </div>
       </nav>
 
-      <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-        <!-- Indicators/dots -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-          <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-        </div>
-      
-        <!-- The slideshow/carousel -->
-        <div class="carousel-inner custom-carousel">
-          <div class="carousel-item active">
-            <img src="Kuvat/Origin.jpg" alt="Muse Album" class="d-block w-100">
-            <div class="carousel-caption">
-              <h3>Origin Of Symmetry</h3>
-              <p>The classic album form Muse</p>
-            </div>
+      <!-- About Us -->
+      <div class="container" id="about">
+        <h2>About Us</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="Kuvat/vinyls.jpg" alt="Vinyl discs" class="img-fluid rounded-3" />
           </div>
-          <div class="carousel-item">
-            <img src="Kuvat/Altered.jpg" alt="Tesseract Album" class="d-block w-100">
-            <div class="carousel-caption">
-              <h3>Altered State</h3>
-              <p>A breakthrough album from Tesseract</p>
-            </div>
+          <div class="col-md-4">
+            <h3>Kyle's Vinyls</h3>
+            <p>Welcome to Kyle's Vinyls, the one stop shop for all music and vinyl lovers! You can find oldies, new releases, classics and underground gems. We have it all! You can find us at Ratapihantie 13.</p>
+            <p>Our opening hours: <br> monday - friday 10:00 - 19:00 <br> saturday and sunday: 11:00 - 18:00</p>
           </div>
-          <div class="carousel-item">
-            <img src="Kuvat/Sonder.jpg" alt="Tesseract Album" class="d-block w-100">
-            <div class="carousel-caption">
-              <h3>Sonder</h3>
-              <p>A new arrival from Tesseract</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="Kuvat/Master.jpg" alt="Metallica Album" class="d-block w-100">
-            <div class="carousel-caption">
-              <h3>Master Of Puppets</h3>
-              <p>A true metal classic from Metallica</p>
-            </div>
+          <div class="col-md-4">
+            <img src="Kuvat/disc.jpg" alt="Record player" class="img-fluid rounded-3" />
           </div>
         </div>
-      
-        <!-- Left and right controls/icons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
       </div>
 
-      <form onsubmit="return false" class="lomake">
-        <label for="nimi" class="muoto">Nimi:</label>
-        <input type="text" id="nimi" placeholder="Kerro nimesi" required />
-        <br />
-        <label for="sposti"class="muoto">Sähköposti:</label>
-        <input
-          type="email"
-          id="sposti"
-          placeholder="Sähköpostiosoite"
-          required
-        />
-        <br />
-        <label for="puh"class="muoto">Puhelin:</label>
-        <input type="tel" id="puh" placeholder="Puhelinnumero" />
-        <br /> <br>
-        <label for="palaute">Palaute</label>
-        <br>
-        <textarea id="palaute" rows="5" cols="50" maxlength="150"></textarea>
-        <br /> <br>
-        <label>Mikä oli parasta sivullamme?</label>
-        <br />
-        <input type="radio" id="vinyl" name="parasta" value="vinyl" />
-        <label for="vinyl">Vinylit</label>
-        <br />
-        <input type="radio" id="cd" name="parasta" value="cd" />
-        <label for="cd">CD</label>
-        <br />
-        <input type="radio" id="kasetit" name="parasta" value="kasetit" />
-        <label for="kasetit">Kasetit</label>
-        <br /> <br>
-        <label>Mitä haluaisit lisää valikoimmaamme?</label>
-        <br />
-        <input type="checkbox" id="metal" name="lisaa" value="metal" />
-        <label for="metal">Metallia</label>
-        <br />
-        <input type="checkbox" id="pop" name="lisaa" value="pop" />
-        <label for="pop">Poppia</label>
-        <br />
-        <input type="checkbox" id="classic" name="lisaa" value="classic" />
-        <label for="classic">Klassikoita</label>
-        <br /> <br>
-        <label>Löysitkö etsimäsi sivuiltamme?</label>
-        <br>
-        <select name="loytyiko" id="loytyiko">
-          <option value="yes">Kyllä</option>
-          <option value="no">Ei</option>
-        <br />
-        <input type="submit" value="Lähetä" onclick="laheta()" />
-        <input type="reset" value="Tyhjennä" />
-      </form>
-      <div id="vastaus"></div>
+      <!-- New Releases -->
+      <div class="container" id="new-arrivals">
+        <h2>New Arrivals</h2>
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+          </div>
+        
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner custom-carousel">
+            <div class="carousel-item active">
+              <img src="Kuvat/Origin.jpg" alt="Muse Album" class="d-block w-100">
+              <div class="carousel-caption">
+                <h3>Origin Of Symmetry</h3>
+                <p>The classic album form Muse</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Kuvat/Altered.jpg" alt="Tesseract Album" class="d-block w-100">
+              <div class="carousel-caption">
+                <h3>Altered State</h3>
+                <p>A breakthrough album from Tesseract</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Kuvat/Sonder.jpg" alt="Tesseract Album" class="d-block w-100">
+              <div class="carousel-caption">
+                <h3>Sonder</h3>
+                <p>A new arrival from Tesseract</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Kuvat/Master.jpg" alt="Metallica Album" class="d-block w-100">
+              <div class="carousel-caption">
+                <h3>Master Of Puppets</h3>
+                <p>A true metal classic from Metallica</p>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Left and right controls/icons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+<!-- Featured Vinyls -->
+<div class="container" id="featured-vinyls">
+  <h2>Featured Vinyls</h2>
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-3 mb-4">
+      <div class="card">
+        <img src="Kuvat/Origin.jpg" class="card-img-top img-fluid" alt="Muse album">
+        <div class="card-body">
+          <p class="card-text">Muse: Origin of Symmetry</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 mb-4">
+      <div class="card">
+        <img src="Kuvat/Sonder.jpg" class="card-img-top img-fluid" alt="Tesseract album">
+        <div class="card-body">
+          <p class="card-text">Tesseract: Sonder</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 mb-4">
+      <div class="card">
+        <img src="Kuvat/Altered.jpg" class="card-img-top img-fluid" alt="Tesseract album">
+        <div class="card-body">
+          <p class="card-text">Tesseract: Altered State</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 mb-4">
+      <div class="card">
+        <img src="Kuvat/Master.jpg" class="card-img-top img-fluid" alt="Metallica album">
+        <div class="card-body">
+          <p class="card-text">Metallica: Master Of Puppets</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div class="container mt-5" id="tabs">
+  <h3>Tracks from the featured albums</h3>
+  <!-- Tab Navigation -->
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="first-tab" data-bs-toggle="tab" href="#first" role="tab" aria-controls="first" aria-selected="true">Luminary</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="second-tab" data-bs-toggle="tab" href="#second" role="tab" aria-controls="second" aria-selected="false">Nocturne</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="third-tab" data-bs-toggle="tab" href="#third" role="tab" aria-controls="third" aria-selected="false">Bliss</a>
+    </li>
+  </ul>
+  <!-- Tab Content -->
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/jJKsmaGtrjo?si=tnJTveG-5YIdk_8O" title="YouTube video" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/get0cXOsSXg?si=7fl4EQsPZUO48NwA" title="YouTube video" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/8D0ybTfYmCE?si=L7BZY-NuCLHbhKiu" title="YouTube video" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="contact">
+  <h3>Contact Info</h3>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Contact Method</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Address</td>
+          <td>Ratapihantie 13, Helsinki, Finland</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>+358 123 4567</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>info@kylesvinyls.fi</td>
+        </tr>
+        <tr>
+          <td>Social Media</td>
+          <td>
+            <a href="#" target="_blank">Instagram</a><br>
+            <a href="#" target="_blank">Facebook</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Opening Hours</td>
+          <td>Mon-Fri: 10:00 - 19:00<br>Sat-Sun: 11:00 - 18:00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+      <!-- Form -->
+      <div class="container" id="feedback">
+        <h2>Give feedback</h2>
+        <form onsubmit="return false" class="lomake">
+          <label for="nimi" class="muoto">Name:</label>
+          <input type="text" id="nimi" placeholder="Your name" required />
+          <br />
+        
+          <label for="sposti" class="muoto">Email:</label>
+          <input type="email" id="sposti" placeholder="Email" required />
+          <br />
+        
+          <label for="puh" class="muoto">Phone:</label>
+          <input type="tel" id="puh" placeholder="Phone number" />
+          <br /> <br />
+        
+          <label for="palaute" class="muoto">Feedback:</label>
+          <textarea id="palaute" rows="5" cols="50" maxlength="150" placeholder="Your feedback"></textarea>
+          <br /> <br />
+        
+          <label>What did you enjoy on this page?</label>
+          <br />
+          <input type="radio" id="vinyl" name="parasta" value="vinyl" />
+          <label for="vinyl">Vinyls</label>
+          <br />
+          <input type="radio" id="cd" name="parasta" value="cd" />
+          <label for="cd">CD</label>
+          <br />
+          <input type="radio" id="videos" name="parasta" value="videos" />
+          <label for="videos">Videos</label>
+          <br /> <br />
+        
+          <label>What would you like to see more?</label>
+          <br />
+          <input type="checkbox" id="metal" name="lisaa" value="metal" />
+          <label for="metal">Metal</label>
+          <br />
+          <input type="checkbox" id="pop" name="lisaa" value="pop" />
+          <label for="pop">Pop</label>
+          <br />
+          <input type="checkbox" id="classic" name="lisaa" value="classic" />
+          <label for="classic">Classics</label>
+          <br /> <br />
+        
+          <label>Did you find what you were looking for?</label>
+          <br>
+          <select name="loytyiko" id="loytyiko">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <br />
+          <input type="submit" value="Submit" onclick="laheta()" />
+          <input type="reset" value="Clear" />
+        </form>
+        <div id="vastaus"></div>
+      </div>
+
     </main>
+
+    <div id="backToTopBar">
+      <button id="backToTopButton" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        Back to Top
+      </button>
+    </div>
+
     <script src="oma.js"></script>
+    <div id="vastaus"></div>
   </body>
 </html>

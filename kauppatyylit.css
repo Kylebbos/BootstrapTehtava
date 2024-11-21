@@ -1,53 +1,77 @@
- a {
+a {
     font-family: 'Oswald', sans-serif;
- }
- 
- /* taustan väri */
- .navbar-custom {
+}
+
+.navbar-custom {
     background-color: rgba(242, 155, 250, 0.966);
 }
 
-/* brandin ja tekstin väri */
 .navbar-custom .navbar-brand,
-.navbar-custom .navbar-text{
+.navbar-custom .navbar-text {
     color: rgb(194, 0, 94);
 }
 
-/* linkin väri */
 .navbar-custom .navbar-nav .nav-link {
     color: rgba(140, 0, 255, 0.678);
     font-family: 'Oswald', sans-serif;
 }
 
-/* aktiivisen & hover-linkin väri */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
     color: #ffffff;
 }
 
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+.nav-link.active {
+    color: white !important;
   }
 
-  .custom-toggler.navbar-toggler {
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); /* Hamburger icon */
+}
+
+.custom-toggler.navbar-toggler {
     border-color: rgba(255, 142, 217, 0.842);
 }
 
 .logo {
     width: 50px;
     height: auto;
+}
+
+
+main.container-fluid {
+    padding-top: 100px;
+}
+
+label.muoto {
+    display: inline-block;
+    width: 6em;
+  }
+  
+  input, textarea {
+    margin: 5px 0;
+    border: 1px solid #ea00ff;
+    border-radius: 4px;
   }
 
-  main.container-fluid {
-    margin-top: 80px;
-}
-
-label.muoto{display: inline-block;
-    width:6em;
-    text-align:right;
-    vertical-align:top;
-}
+  textarea {
+    width: 100%;
+  }
   
+  input:focus, textarea:focus {
+    outline-color: #c384ff;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: #f294ff;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+
+
 .custom-carousel {
     max-width: 400px;
     margin: 0 auto;
@@ -56,17 +80,16 @@ label.muoto{display: inline-block;
     background-color: #fff;
 }
 
-
 .custom-carousel img {
-    width: 100%; /* Make the image take up the full width of the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
-    top: 50%; 
-    transform: translateY(-50%); 
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 10;
     display: flex;
     align-items: center;
@@ -83,14 +106,96 @@ label.muoto{display: inline-block;
 
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-        }
-    
+}
+
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-    }
-    
-
-.main-body
-{
-    background-color: #ffffff;
 }
+
+
+.main-body {
+    background-color: #ffffff;
+    position: relative; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#backToTopBar {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+#backToTopButton {
+    background-color: #c384ff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#backToTopButton:hover {
+    background-color: #7020cc;
+}
+
+#about,
+#new-arrivals,
+#featured-vinyls,
+#tabs,
+#contact,
+#feedback {
+    margin-bottom: 30px;
+    background-color: #fedbff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure tabs have the same style as other links */
+.nav-tabs .nav-link {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: #ab2dff;
+    text-transform: uppercase;
+  }
+  
+  .nav-tabs .nav-link:hover {
+    color: #5e0059;
+    background-color: transparent;
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #f14df1;
+    border-color: #9600aa;
+  }
+  
+  #featured-vinyls h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Adds a subtle hover effect */
+  }
+
+  #about h3, #about p {
+    text-align: center;
+  }
+
+  #new-arrivals h2 {
+    text-align: center;
+  }
